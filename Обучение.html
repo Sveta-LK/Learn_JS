@@ -265,7 +265,7 @@ function min (a, b) {
 min (2, 2)*/
 
 
-function pow(x, n) {
+/*function pow(x, n) {
     let x1 = prompt("x?")
     let n1 = prompt("n?")
     if (n1>0 && n1%1===0) {
@@ -275,7 +275,228 @@ function pow(x, n) {
         alert (`Степень \`${n1}\` не поддерживается, используйте натуральное число`)
     }
 }
-pow ()
+pow ()*/
+
+/*function ask(question, yes, no) {
+     (confirm(question)) ? yes() : no();
+}
+
+function showOk() {
+    alert( "Вы согласны." );
+}
+
+function showCancel() {
+    alert( "Вы отменили выполнение." );
+}
+
+// использование: функции showOk, showCancel передаются в качестве аргументов ask
+ask("Вы согласны?", showOk, showCancel);*/
+
+/*sayHi("Вася"); // Привет, Вася
+
+function sayHi(name) {
+    alert( "Привет, " + `${name}` );
+}*/
+
+/*function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+
+ask(
+    "Вы согласны?",
+    function() { alert("Вы согласились."); },
+    function() { alert("Вы отменили выполнение."); }
+);*/
+// заменяем стрелочной функцией
+
+/*let ask = (question, yes, no) => {
+    (confirm(question)) ? yes() : no()
+}
+
+ask(
+    "Вы согласны?",
+    () => alert("Вы согласились.") ,
+    () => alert("Вы отменили выполнение.")
+);*/
+
+/*let fruit = prompt("Какой фрукт купить?", "apple");
+
+let bag = {
+    [fruit]: 5, // имя свойства будет взято из переменной fruit
+};
+
+alert( bag[fruit])*/
+
+/*let user = {
+    name: "John",
+    surname: "Smith"
+}
+user.name = "Pete"
+delete user.name*/
+
+/*function makeUser(name, age) {
+    return {
+        name: name,
+        age: age
+        // ...другие свойства
+    };
+}
+let user = makeUser("John", 30);
+alert(user.name);
+
+
+let fruit = prompt("Какой фрукт купить?", "apple");
+let bag = {};
+// имя свойства будет взято из переменной fruit
+bag[fruit] = 5;
+
+
+//Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+
+ */
+/*function isEmpty(obj) {
+    return !(let key in obj);
+}
+
+let schedule = {};
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "get up";
+alert( isEmpty(schedule) );*/
+
+/*function isEmpty(obj) {
+    for (let key in obj) {
+        return false;
+    }
+    return true;
+}
+
+let schedule = {};
+alert( isEmpty(schedule) );
+
+schedule["8:30"] = "get up";
+alert( isEmpty(schedule) );*/
+
+"use strict"
+
+/*let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130,
+}
+
+
+function sum (obj) {
+    for (let key in obj) {
+        if (typeof (obj[key]) == "number") {
+            let sum1 = 0;
+            return sum1 += obj[key]
+        }
+        else {
+            return 0
+        }
+    }
+}
+
+alert (sum (salaries))*/
+
+/*let sum = 0;
+for (let key in salaries) {
+    sum += salaries[key];
+}
+
+alert(sum);*/
+
+/*let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof (obj[key]) == "number") {
+            obj[key] *= 2
+        }
+    }
+}
+
+    multiplyNumeric(menu);
+    alert( "menu width=" + menu.width + " height=" + menu.height + " title=" + menu.title )*/
+
+/*let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+
+let sum = 0
+for (let key in salaries) {
+    sum += salaries[key]
+}
+
+alert (sum)*/
+
+
+/*let calculator = {
+    read() {
+            this.a = Number (prompt("a?", "0"))
+            this.b = Number (prompt("b?", "0"))
+    },
+    sum() {
+        return (this.a + this.b)
+    },
+    mul() {
+        return (this.a * this.b)
+    },
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );*/
+
+/*let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+    },
+    down() {
+        this.step--;
+    },
+    showStep: function() { // показывает текущую ступеньку
+        alert( this.step );
+    }
+};
+
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep(); // 1
+ladder.down();
+ladder.showStep(); // 0*/
+
+// переписываем чтобы вызывалось по цепочке
+
+/*let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this
+    },
+    down() {
+        this.step--;
+        return this
+    },
+    showStep: function() { // показывает текущую ступеньку
+        alert( this.step );
+        return this
+    }
+};
+
+ladder.up().up().down().showStep().down().showStep();*/
+
+
 
 </script>
 </body>
